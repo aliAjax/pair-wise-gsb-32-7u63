@@ -5,6 +5,15 @@ import 'element-plus/dist/index.css';
 import './style.css';
 import App from './App.vue';
 import router from './router';
+import { useDayPlanStore } from './stores/dayPlanStore';
 
-createApp(App).use(createPinia()).use(router).use(ElementPlus).mount('#app');
+const app = createApp(App);
+const pinia = createPinia();
+
+app.use(pinia).use(router).use(ElementPlus);
+
+// 启动时按各旅行的起止日期补齐每天一条行程（兼容历史数据）
+useDayPlanStore(pinia).syncAllTrips();
+
+app.mount('#app');
 

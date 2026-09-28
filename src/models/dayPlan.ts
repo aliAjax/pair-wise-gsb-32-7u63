@@ -1,4 +1,6 @@
 export interface DayPlanItem {
+  /** 行程项自身 id，移动日期、拖拽排序时作为稳定 key */
+  id: string;
   spot_id: string;
   start_time: string;
   end_time: string;
@@ -13,4 +15,3 @@ export interface DayPlan {
   date: string;
   items: DayPlanItem[];
 }
-
