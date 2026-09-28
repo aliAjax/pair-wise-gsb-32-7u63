@@ -1,10 +1,31 @@
 export const messages = {
   tripCreated: '旅行计划已创建',
+  tripUpdated: '旅行信息已保存，行程天数已按起止日期更新',
   tripDeleted: '旅行计划已删除',
   spotAdded: '景点已加入当天行程',
+  spotRemoved: '景点已从当天行程移除',
   emptyTrips: '还没有旅行计划，先创建一次出发。',
   emptySpots: '没有符合条件的景点。',
   budgetExceeded: '预算可能超支，请调整景点或交通方式',
   storageRecovered: '本地数据已恢复',
+  // 表单校验文案
+  titleRequired: '请填写旅行标题',
+  destinationRequired: '请填写目的地',
+  dateRangeRequired: '请选择起止日期',
+  dateRangeInvalid: '结束日期不能早于开始日期',
+  budgetInvalid: '预算需为不小于 0 的数字',
+  memberRequired: '同行人姓名不能为空',
+  // 日期缩短冲突文案
+  daysConflictTitle: '以下日期的安排需要先处理',
+  daysConflictTip: '缩短起止日期会丢掉这些天已有的景点，请先在详情/编排页移除或调整后再保存。',
+  dayLabel: (dayIndex: number, count: number) => `第 ${dayIndex} 天（${count} 个景点）`,
+  // 页面/对话框文案
+  createTripTitle: '新建旅行',
+  editTripTitle: '编辑旅行',
+  pickTripAndDay: '选择要加入的旅行与日期',
+  noTripForSpot: '还没有旅行计划，请先新建旅行',
+  saveTripFirst: '请先选择旅行',
+  perDayCount: (count: number) => `${count} 个景点`,
+  membersLabel: '同行人',
+  membersPlaceholder: '输入同行人姓名后回车添加',
 };
-
